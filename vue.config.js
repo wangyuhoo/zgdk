@@ -27,8 +27,8 @@ module.exports = {
   },
   devServer: {
       open:false,
-      port: 5200,
-      host: '0.0.0.0',
+      port: 80,
+      host: 'crm.xxx.com',
       disableHostCheck: true,
       proxy: {
         '/api': {
