@@ -87,7 +87,7 @@
           个人信息，防止泄露、损毁、丢失。
       </div>
     </div>
-    <div class="stats_ba">
+    <div style=" font-size: 12px;text-align: center;margin: 0px 15px;margin-bottom: 20px;color: #666666;">
       深圳市广盛行小额贷款有限公司   <a href="http://www.beian.miit.gov.cn" target="_break" style="text-decoration:none;color: #666666;">粤ICP备16036179号</a>
     </div>
   </div>
@@ -231,13 +231,7 @@
     margin-bottom: 20px;
     color: #666666;
   }
-  .stats_ba{
-    font-size: 12px;
-    text-align: center;
-    margin: 0px 15px;
-    margin-bottom: 20px;
-    color: #666666;
-  }
+  
   .stats {
     font-size: 16px;
     color: #666666;
