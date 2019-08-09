@@ -90,6 +90,9 @@
         粤ICP备16036179号<br/>
       </div>
     </div>
+    <div style=" font-size: 12px;text-align: center;margin: 0px 15px;margin-bottom: 20px;color: #666666;">
+      深圳市广盛行小额贷款有限公司   <a href="http://www.beian.miit.gov.cn" target="_break" style="text-decoration:none;color: #666666;">粤ICP备16036179号</a>
+    </div>
   </div>
 </template>
 
@@ -137,7 +140,8 @@
         options: undefined,
         changePrimary: 0,
         ruleForm: {
-          dk_from: 'default',
+          dk_account: 'GS',
+          dk_platform: 'BD',
           dk_month: '',
           dk_money: 10,
           dk_name: '',
@@ -182,7 +186,8 @@
       }
     },
     mounted() {
-      this.ruleForm.dk_from = this.$route.query.from ? this.$route.query.from : 'gs'
+      this.ruleForm.dk_account = this.$route.query.account ? this.$route.query.account : 'GS',
+      this.ruleForm.dk_platform = this.$route.query.platform ? this.$route.query.platform : 'BD'
     },
     created() {
       Indicator.close();

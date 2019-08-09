@@ -137,7 +137,8 @@
         options: undefined,
         changePrimary: 0,
         ruleForm: {
-          dk_from: 'default',
+          dk_account: 'GS',
+          dk_platform: 'BD',
           dk_month: '',
           dk_money: 10,
           dk_name: '',
@@ -182,7 +183,8 @@
       }
     },
     mounted() {
-      this.ruleForm.dk_from = this.$route.query.from ? this.$route.query.from : 'default'
+      this.ruleForm.dk_account = this.$route.query.account ? this.$route.query.account : 'GS',
+      this.ruleForm.dk_platform = this.$route.query.platform ? this.$route.query.platform : 'BD'
     },
     created() {
       Indicator.close();
@@ -192,7 +194,7 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             sqdk(this.ruleForm).then((data) => {
-              MessageBox('提交成功', '申请已经提交成功,后台审核通过之后我们会尽快联系您!');
+              MessageBox('提交成功', data.message);
             })
           } else {
             return false;
@@ -209,7 +211,7 @@
         } else {
           sendSms(this.ruleForm.dk_phone).then((data) => {
             Toast({
-              message: '短信发送成功,请注意查收',
+              message: data.message,
               type: 'success',
               duration: 1 * 1000
             })
